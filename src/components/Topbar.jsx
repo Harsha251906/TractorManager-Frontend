@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import "../styles/Topbar.css";
 
 function Topbar({
@@ -8,8 +7,6 @@ function Topbar({
     user
 
 }) {
-
-    const navigate = useNavigate();
 
     const firstLetter =
 
@@ -34,7 +31,8 @@ function Topbar({
             </div>
 
             <div className="topbar-right">
-                                <div className="profile-box">
+
+                <div className="profile-box">
 
                     <div className="profile-avatar">
 
@@ -67,7 +65,8 @@ function Topbar({
                 </div>
 
             </div>
-                    </header>
+
+        </header>
 
     );
 

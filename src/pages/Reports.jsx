@@ -1,133 +1,84 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 import api from "../services/api";
-
 import OwnerLayout from "../layouts/OwnerLayout";
-
 import "../styles/Reports.css";
 
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 
 import * as XLSX from "xlsx";
-
 import { saveAs } from "file-saver";
 
 function Reports() {
 
     const [works, setWorks] = useState([]);
 
-    const [expenses, setExpenses] = useState([]);
+    // Expenses state removed because it isn't displayed separately
 
     const [report, setReport] = useState({
 
         income: 0,
-
         expense: 0,
-
         profit: 0,
-
         acres: 0,
-
         totalWorks: 0
 
     });
 
-    useEffect(() => {
-
-        loadData();
-
-    }, []);
-
-    const loadData = async () => {
-
-        try {
-
-            const workRes = await api.get("/work");
-
-            const expenseRes = await api.get("/expenses");
-
-            const workData = workRes.data.data || [];
-
-            const expenseData = expenseRes.data.data || [];
-
-            setWorks(workData);
-
-            setExpenses(expenseData);
-
-            calculateReport(
-
-                workData,
-
-                expenseData
-
-            );
-
-        }
-
-        catch (error) {
-
-            console.log(error);
-
-        }
-
-    };
-
-    const calculateReport = (
-
-        workData,
-
-        expenseData
-
-    ) => {
+    const calculateReport = useCallback((workData, expenseData) => {
 
         let income = 0;
-
         let expense = 0;
-
         let acres = 0;
 
         workData.forEach((work) => {
 
-            income += Number(
-
-                work.totalAmount || 0
-
-            );
-
-            acres += Number(
-
-                work.acres || 0
-
-            );
+            income += Number(work.totalAmount || 0);
+            acres += Number(work.acres || 0);
 
         });
 
         expenseData.forEach((item) => {
 
-            expense += Number(
-
-                item.amount || 0
-
-            );
+            expense += Number(item.amount || 0);
 
         });
 
         setReport({
 
             income,
-
             expense,
-
             profit: income - expense,
-
             acres,
-
             totalWorks: workData.length
 
         });
 
-    };
+    }, []);
+
+const loadData = useCallback(async () => {
+
+    try {
+
+        const workRes = await api.get("/work");
+        const expenseRes = await api.get("/expenses");
+
+        const workData = workRes.data.data || [];
+        const expenseData = expenseRes.data.data || [];
+
+        setWorks(workData);
+
+        calculateReport(workData, expenseData);
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+}, [calculateReport]);
+   
         const downloadPDF = () => {
 
         const doc = new jsPDF();

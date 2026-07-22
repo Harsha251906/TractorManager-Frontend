@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import FarmerLayout from "../layouts/FarmerLayout";
 import OwnerCard from "../components/OwnerCard";
 import api from "../services/api";
@@ -7,134 +7,41 @@ import "../styles/NearbyOwners.css";
 function NearbyOwners() {
 
     const [owners, setOwners] = useState([]);
-
     const [loading, setLoading] = useState(true);
 
     const [location, setLocation] = useState({
-
         lat: null,
-
         lng: null
-
     });
 
     const [machineType, setMachineType] = useState("");
 
     const machineList = [
-
         "Tractor",
-
         "Harvester",
-
         "Rotavator",
-
         "Cultivator",
-
         "Trailer",
-
         "JCB"
-
     ];
 
-    useEffect(() => {
-
-        getCurrentLocation();
-
-    }, []);
-
-    const getCurrentLocation = () => {
-
-        if (!navigator.geolocation) {
-
-            alert("Geolocation is not supported by your browser.");
-
-            setLoading(false);
-
-            return;
-
-        }
-
-        navigator.geolocation.getCurrentPosition(
-
-            async (position) => {
-
-                const lat = position.coords.latitude;
-
-                const lng = position.coords.longitude;
-
-                setLocation({
-
-                    lat,
-
-                    lng
-
-                });
-
-                loadOwners(
-
-                    lat,
-
-                    lng,
-
-                    machineType
-
-                );
-
-            },
-
-            (error) => {
-
-                console.log(error);
-
-                alert("Unable to get your current location.");
-
-                setLoading(false);
-
-            }
-
-        );
-
-    };
-
-    const loadOwners = async (
-
-        lat,
-
-        lng,
-
-        machine
-
-    ) => {
+    const loadOwners = useCallback(async (lat, lng, machine) => {
 
         try {
 
             setLoading(true);
 
-            const res = await api.get(
+            const res = await api.get("/users/nearby", {
 
-                "/users/nearby",
-
-                {
-
-                    params: {
-
-                        lat,
-
-                        lng,
-
-                        machineType: machine
-
-                    }
-
+                params: {
+                    lat,
+                    lng,
+                    machineType: machine
                 }
 
-            );
+            });
 
-            setOwners(
-
-                res.data.data || []
-
-            );
+            setOwners(res.data.data || []);
 
         }
 
@@ -158,8 +65,61 @@ function NearbyOwners() {
 
         }
 
-    };
-        const handleMachineChange = (e) => {
+    }, []);
+
+    const getCurrentLocation = useCallback(() => {
+
+        if (!navigator.geolocation) {
+
+            alert("Geolocation is not supported by your browser.");
+
+            setLoading(false);
+
+            return;
+
+        }
+
+        navigator.geolocation.getCurrentPosition(
+
+            async (position) => {
+
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+
+                setLocation({
+                    lat,
+                    lng
+                });
+
+                loadOwners(
+                    lat,
+                    lng,
+                    machineType
+                );
+
+            },
+
+            (error) => {
+
+                console.log(error);
+
+                alert("Unable to get your current location.");
+
+                setLoading(false);
+
+            }
+
+        );
+
+    }, [loadOwners, machineType]);
+
+    useEffect(() => {
+
+        getCurrentLocation();
+
+    }, [getCurrentLocation]);
+
+    const handleMachineChange = (e) => {
 
         const value = e.target.value;
 
@@ -168,20 +128,15 @@ function NearbyOwners() {
         if (location.lat && location.lng) {
 
             loadOwners(
-
                 location.lat,
-
                 location.lng,
-
                 value
-
             );
 
         }
 
     };
-
-    return (
+        return (
 
         <FarmerLayout>
 
@@ -189,16 +144,10 @@ function NearbyOwners() {
 
                 <div className="nearby-header">
 
-                    <h1>
-
-                        🚜 Nearby Tractor Owners
-
-                    </h1>
+                    <h1>🚜 Nearby Tractor Owners</h1>
 
                     <p>
-
                         Find available tractor owners near your location.
-
                     </p>
 
                 </div>
@@ -206,17 +155,12 @@ function NearbyOwners() {
                 <div className="filter-box">
 
                     <select
-
                         value={machineType}
-
                         onChange={handleMachineChange}
-
                     >
 
                         <option value="">
-
                             All Machines
-
                         </option>
 
                         {
@@ -224,11 +168,8 @@ function NearbyOwners() {
                             machineList.map((machine) => (
 
                                 <option
-
                                     key={machine}
-
                                     value={machine}
-
                                 >
 
                                     {machine}
@@ -242,9 +183,7 @@ function NearbyOwners() {
                     </select>
 
                     <button
-
                         onClick={getCurrentLocation}
-
                     >
 
                         📍 Refresh Location
@@ -302,11 +241,8 @@ function NearbyOwners() {
                         owners.map((owner) => (
 
                             <OwnerCard
-
                                 key={owner._id}
-
                                 owner={owner}
-
                             />
 
                         ))
@@ -314,10 +250,10 @@ function NearbyOwners() {
                     }
 
                 </div>
+
                 {
 
                     location.lat &&
-
                     location.lng && (
 
                         <div className="location-box">
@@ -353,4 +289,5 @@ function NearbyOwners() {
     );
 
 }
+
 export default NearbyOwners;
