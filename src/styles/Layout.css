@@ -1,0 +1,27 @@
+.layout{
+    display:flex;
+    min-height:100vh;
+    background:#f3f4f6;
+}
+
+.main-content{
+    margin-left:280px;
+    width:calc(100% - 280px);
+    display:flex;
+    flex-direction:column;
+}
+
+.page-content{
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+.main-content{
+
+margin-left:0;
+width:100%;
+
+}
+
+}

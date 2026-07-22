@@ -1,0 +1,44 @@
+{
+  "dashboard": "డాష్‌బోర్డ్",
+  "addWork": "పని జోడించండి",
+  "history": "చరిత్ర",
+  "expenses": "ఖర్చులు",
+  "reports": "నివేదికలు",
+
+  "tractorManager": "ట్రాక్టర్ మేనేజర్",
+
+  "farmerName": "రైతు పేరు",
+  "village": "గ్రామం",
+  "mobile": "మొబైల్ నంబర్",
+
+  "workType": "పని రకం",
+
+  "hours": "గంటలు",
+  "acres": "ఎకరాలు",
+
+  "ratePerHour": "గంటకు ధర",
+  "ratePerAcre": "ఎకరానికి ధర",
+
+  "dieselUsed": "డీజిల్ వినియోగం",
+
+  "driverName": "డ్రైవర్ పేరు",
+
+  "paymentStatus": "చెల్లింపు స్థితి",
+
+  "paid": "చెల్లించబడింది",
+  "pending": "బాకీ",
+
+  "saveWork": "పని సేవ్ చేయండి",
+
+  "todayIncome": "ఈరోజు ఆదాయం",
+  "monthIncome": "ఈ నెల ఆదాయం",
+  "profit": "లాభం",
+  "totalIncome": "మొత్తం ఆదాయం",
+  "totalExpense": "మొత్తం ఖర్చు",
+  "pendingPayments": "బాకీ చెల్లింపులు",
+  "totalAcres": "మొత్తం ఎకరాలు",
+  "totalHours": "మొత్తం గంటలు",
+  "diesel": "డీజిల్ వినియోగం",
+  "farmers": "మొత్తం రైతులు",
+  "mostUsedWork": "ఎక్కువగా చేసిన పని"
+}

@@ -1,0 +1,80 @@
+.history-page{
+    padding:40px;
+    background:#f4f8f5;
+    min-height:100vh;
+}
+
+.history-card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.history-title{
+    color:#166534;
+    margin-bottom:25px;
+}
+
+.filter-box{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.filter-box input{
+    flex:1;
+    min-width:220px;
+}
+
+.history-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.history-table th{
+    background:#16a34a;
+    color:#fff;
+    padding:14px;
+}
+
+.history-table td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+}
+
+.history-table tr:hover{
+    background:#f0fdf4;
+}
+
+.paid{
+    background:#16a34a;
+    color:white;
+    padding:8px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.pending{
+    background:#f59e0b;
+    color:white;
+    padding:8px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.delete-btn{
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#b91c1c;
+}

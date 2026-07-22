@@ -1,0 +1,157 @@
+.booking-page{
+
+    padding:40px;
+
+    background:#f5f7fa;
+
+    min-height:100vh;
+
+}
+
+.booking-page h1{
+
+    color:#166534;
+
+    margin-bottom:25px;
+
+}
+
+.booking-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:15px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    margin-bottom:35px;
+
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+.booking-form textarea{
+
+    resize:none;
+
+    height:90px;
+
+}
+
+.booking-form button{
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+.booking-form button:hover{
+
+    background:#15803d;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+table th{
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+table td{
+
+    padding:12px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+table button{
+
+    margin:3px;
+
+    padding:8px 12px;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    color:white;
+
+}
+
+table button:nth-child(1){
+
+    background:#16a34a;
+
+}
+
+table button:nth-child(2){
+
+    background:#2563eb;
+
+}
+
+table button:nth-child(3){
+
+    background:#dc2626;
+
+}
+
+table button:hover{
+
+    opacity:.9;
+
+}

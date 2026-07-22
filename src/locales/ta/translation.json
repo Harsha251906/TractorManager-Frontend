@@ -1,0 +1,35 @@
+{
+  "dashboard": "டாஷ்போர்டு",
+  "addWork": "வேலை சேர்க்க",
+  "history": "வரலாறு",
+  "expenses": "செலவுகள்",
+  "reports": "அறிக்கைகள்",
+
+  "tractorManager": "டிராக்டர் மேலாளர்",
+
+  "farmerName": "விவசாயி பெயர்",
+  "village": "கிராமம்",
+  "mobile": "மொபைல் எண்",
+
+  "workType": "வேலை வகை",
+
+  "hours": "மணி",
+
+  "acres": "ஏக்கர்",
+
+  "ratePerHour": "ஒரு மணிநேர கட்டணம்",
+
+  "ratePerAcre": "ஒரு ஏக்கர் கட்டணம்",
+
+  "dieselUsed": "டீசல் பயன்பாடு",
+
+  "driverName": "ஓட்டுநர் பெயர்",
+
+  "paymentStatus": "கட்டண நிலை",
+
+  "paid": "செலுத்தப்பட்டது",
+
+  "pending": "நிலுவையில்",
+
+  "saveWork": "வேலையை சேமி"
+}

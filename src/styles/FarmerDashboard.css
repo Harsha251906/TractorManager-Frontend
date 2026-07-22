@@ -1,0 +1,369 @@
+/* ===========================
+   FARMER DASHBOARD
+=========================== */
+
+.farmer-dashboard{
+    min-height:100vh;
+    padding:35px;
+    background:#f4f7fb;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    padding:40px;
+    border-radius:24px;
+    background:linear-gradient(135deg,#16a34a,#15803d,#14532d);
+    color:#fff;
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+    overflow:hidden;
+    position:relative;
+    margin-bottom:35px;
+}
+
+.hero-card::before{
+    content:"";
+    position:absolute;
+    right:-60px;
+    top:-60px;
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+}
+
+.hero-card::after{
+    content:"";
+    position:absolute;
+    left:-40px;
+    bottom:-40px;
+    width:160px;
+    height:160px;
+    background:rgba(255,255,255,.05);
+    border-radius:50%;
+}
+
+.hero-card h1{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.hero-card p{
+    font-size:18px;
+    opacity:.95;
+    margin-bottom:25px;
+}
+
+.hero-card img{
+    width:220px;
+    max-width:100%;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero-btn{
+    background:#fff;
+    color:#15803d;
+    border:none;
+    padding:14px 32px;
+    font-size:16px;
+    font-weight:700;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+    font-size:24px;
+    font-weight:700;
+    color:#1f2937;
+    margin:30px 0 18px;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+    margin-bottom:35px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:18px;
+    padding:28px;
+    text-align:center;
+    border:1px solid #e5e7eb;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    transition:.35s;
+    cursor:pointer;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.stat-card h2{
+    font-size:42px;
+    color:#16a34a;
+    margin-bottom:8px;
+}
+
+.stat-card p{
+    font-size:16px;
+    color:#6b7280;
+}
+
+/* ===========================
+   ACTION CARDS
+=========================== */
+
+.action-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+    margin-bottom:35px;
+}
+
+.action-card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    text-decoration:none;
+    color:#111827;
+    border:1px solid #e5e7eb;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    transition:.35s;
+}
+
+.action-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.action-card h2{
+    font-size:48px;
+    margin-bottom:12px;
+}
+
+.action-card h3{
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.action-card p{
+    color:#6b7280;
+    line-height:1.5;
+}
+
+/* ===========================
+   ACTIVITY CARD
+=========================== */
+
+.activity-card{
+    background:#fff;
+    border-radius:18px;
+    padding:28px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.activity-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid #f1f5f9;
+}
+
+.activity-item:last-child{
+    border-bottom:none;
+}
+
+.activity-item span{
+    font-size:38px;
+}
+
+.activity-item h4{
+    margin-bottom:4px;
+    color:#111827;
+}
+
+.activity-item p{
+    color:#6b7280;
+    font-size:15px;
+}
+
+/* ===========================
+   WEATHER CARD
+=========================== */
+
+.weather-card{
+    margin-top:30px;
+    background:linear-gradient(135deg,#0ea5e9,#2563eb);
+    color:white;
+    border-radius:18px;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+.weather-card h2{
+    font-size:24px;
+}
+
+.weather-card p{
+    opacity:.95;
+}
+
+/* ===========================
+   CROP TIPS
+=========================== */
+
+.tip-card{
+    margin-top:25px;
+    background:#ffffff;
+    border-left:6px solid #16a34a;
+    border-radius:16px;
+    padding:20px 25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.tip-card h3{
+    margin-bottom:10px;
+    color:#15803d;
+}
+
+.tip-card p{
+    color:#4b5563;
+    line-height:1.7;
+}
+
+/* ===========================
+   FLOAT ANIMATION
+=========================== */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:992px){
+
+.hero-card{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-card img{
+width:180px;
+}
+
+}
+
+@media(max-width:768px){
+
+.farmer-dashboard{
+padding:18px;
+}
+
+.hero-card{
+padding:25px;
+}
+
+.hero-card h1{
+font-size:28px;
+}
+
+.hero-card p{
+font-size:15px;
+}
+
+.hero-btn{
+width:100%;
+}
+
+.stat-card h2{
+font-size:34px;
+}
+
+.action-card{
+padding:22px;
+}
+
+.action-card h2{
+font-size:42px;
+}
+
+.activity-item{
+flex-direction:column;
+text-align:center;
+}
+
+.weather-card{
+flex-direction:column;
+text-align:center;
+gap:15px;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-card img{
+width:140px;
+}
+
+.hero-card h1{
+font-size:24px;
+}
+
+.section-title{
+font-size:20px;
+}
+
+.stat-card{
+padding:20px;
+}
+
+.action-card{
+padding:20px;
+}
+
+}

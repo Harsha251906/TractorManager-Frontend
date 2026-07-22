@@ -1,0 +1,56 @@
+
+{
+  "dashboard": "Dashboard",
+  "addWork": "Add Work",
+  "history": "History",
+  "expenses": "Expenses",
+  "reports": "Reports",
+
+  "tractorManager": "Tractor Manager",
+
+  "farmerName": "Farmer Name",
+  "village": "Village",
+  "mobile": "Mobile Number",
+
+  "workType": "Work Type",
+
+  "hours": "Hours",
+  "acres": "Acres",
+
+  "ratePerHour": "Rate Per Hour",
+  "ratePerAcre": "Rate Per Acre",
+
+  "dieselUsed": "Diesel Used",
+
+  "driverName": "Driver Name",
+
+  "paymentStatus": "Payment Status",
+
+  "paid": "Paid",
+
+  "pending": "Pending",
+
+  "saveWork": "Save Work",
+
+  "todayIncome": "Today's Income",
+
+  "monthIncome": "This Month Income",
+
+  "profit": "Profit",
+
+  "totalIncome": "Total Income",
+
+  "totalExpense": "Total Expense",
+
+  "pendingPayments": "Pending Payments",
+
+  "totalAcres": "Total Acres Worked",
+
+  "totalHours": "Total Hours Worked",
+
+  "diesel": "Diesel Used",
+
+  "farmers": "Total Farmers",
+
+  "mostUsedWork": "Most Used Work"
+}

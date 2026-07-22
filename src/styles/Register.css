@@ -1,0 +1,197 @@
+.register-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#eef5ef;
+
+    padding:40px;
+
+}
+
+.register-card{
+
+    width:100%;
+
+    max-width:650px;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.register-card h1{
+
+    text-align:center;
+
+    color:#166534;
+
+    margin-bottom:5px;
+
+}
+
+.register-card h2{
+
+    text-align:center;
+
+    color:#444;
+
+    margin-bottom:25px;
+
+}
+
+.register-card h3{
+
+    margin-top:20px;
+
+    color:#166534;
+
+}
+
+.register-card input,
+
+.register-card select{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+
+}
+
+.register-card input:focus,
+
+.register-card select:focus{
+
+    border-color:#16a34a;
+
+    box-shadow:0 0 6px rgba(22,163,74,.3);
+
+}
+
+.machine-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:15px;
+
+}
+
+.machine-grid label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#fafafa;
+
+}
+
+.machine-grid input{
+
+    width:auto;
+
+    margin:0;
+
+}
+
+.register-card button{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#16a34a;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.register-card button:hover{
+
+    background:#15803d;
+
+}
+
+.register-card p{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+.register-card a{
+
+    text-decoration:none;
+
+    color:#166534;
+
+    font-weight:bold;
+
+}
+
+@media(max-width:768px){
+
+.machine-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.register-card{
+
+padding:20px;
+
+}
+
+}

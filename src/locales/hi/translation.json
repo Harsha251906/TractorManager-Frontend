@@ -1,0 +1,44 @@
+{
+  "dashboard": "डैशबोर्ड",
+  "addWork": "काम जोड़ें",
+  "history": "इतिहास",
+  "expenses": "खर्च",
+  "reports": "रिपोर्ट",
+
+  "tractorManager": "ट्रैक्टर मैनेजर",
+
+  "farmerName": "किसान का नाम",
+  "village": "गाँव",
+  "mobile": "मोबाइल नंबर",
+
+  "workType": "कार्य प्रकार",
+
+  "hours": "घंटे",
+  "acres": "एकड़",
+
+  "ratePerHour": "प्रति घंटा दर",
+  "ratePerAcre": "प्रति एकड़ दर",
+
+  "dieselUsed": "डीजल उपयोग",
+
+  "driverName": "ड्राइवर का नाम",
+
+  "paymentStatus": "भुगतान स्थिति",
+
+  "paid": "भुगतान किया",
+  "pending": "बाकी",
+
+  "saveWork": "काम सहेजें",
+
+  "todayIncome": "आज की आय",
+  "monthIncome": "इस महीने की आय",
+  "profit": "लाभ",
+  "totalIncome": "कुल आय",
+  "totalExpense": "कुल खर्च",
+  "pendingPayments": "बकाया भुगतान",
+  "totalAcres": "कुल एकड़",
+  "totalHours": "कुल घंटे",
+  "diesel": "डीजल उपयोग",
+  "farmers": "कुल किसान",
+  "mostUsedWork": "सबसे अधिक किया गया कार्य"
+}
