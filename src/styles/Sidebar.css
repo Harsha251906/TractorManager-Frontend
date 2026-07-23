@@ -173,3 +173,23 @@
     }
 
 }
+.sidebar-user{
+    color:white;
+    margin-bottom:25px;
+}
+
+.sidebar-user h3{
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.sidebar-user p{
+    color:#d1fae5;
+    font-size:14px;
+}
+
+.sidebar-menu{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}

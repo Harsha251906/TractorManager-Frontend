@@ -232,23 +232,20 @@ function Login() {
                 paddingRight: "45px",
               }}
             />
-
             <button
               type="button"
-              onClick={() =>
-                setShowPassword(
-                  !showPassword
-                )
-              }
+              onClick={() => setShowPassword(!showPassword)}
               style={{
                 position: "absolute",
                 right: "10px",
                 top: "50%",
-                transform:
-                  "translateY(-50%)",
+                transform: "translateY(-50%)",
                 border: "none",
                 background: "transparent",
                 cursor: "pointer",
+                width: "35px",
+                height: "35px",
+                padding: 0,
               }}
             >
               {showPassword ? (

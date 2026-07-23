@@ -20,7 +20,7 @@ function Sidebar({ title, menu, user }) {
 
             <div>
 
-                <h2>{title}</h2>
+                <h2 className="sidebar-logo">{title}</h2>
 
                 <div className="sidebar-user">
 
@@ -30,30 +30,22 @@ function Sidebar({ title, menu, user }) {
 
                 </div>
 
-                <nav>
+               <nav className="sidebar-menu">
 
                     {
 
                         menu.map((item)=>(
-
                             <Link
-
                                 key={item.path}
-
                                 to={item.path}
-
                                 className={
-                                    location.pathname===item.path
-                                    ? "active"
-                                    : ""
+                                    `sidebar-link ${
+                                        location.pathname === item.path ? "active" : ""
+                                    }`
                                 }
-
                             >
-
                                 <span>{item.icon}</span>
-
                                 {item.name}
-
                             </Link>
 
                         ))

@@ -71,7 +71,9 @@ body{
     box-shadow:0 0 8px rgba(22,163,74,.25);
 }
 
-.login-box button{
+.login-btn,
+.google-btn,
+.phone-btn{
     width:100%;
     height:50px;
     border:none;

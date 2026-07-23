@@ -9,8 +9,8 @@
 }
 
 .owner-dashboard{
-    max-width:1600px;
-    margin:auto;
+    width:100%;
+    max-width:none;
     padding:30px;
     background:#f4f7fb;
     min-height:100vh;
@@ -579,4 +579,19 @@ padding:20px;
 min-width:700px;
 }
 
+}
+.owner-dashboard{
+    overflow-x:hidden;
+}
+
+.owner-hero{
+    width:100%;
+}
+
+.owner-stats{
+    width:100%;
+}
+
+.owner-actions{
+    width:100%;
 }
