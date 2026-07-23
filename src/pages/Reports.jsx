@@ -78,7 +78,9 @@ const loadData = useCallback(async () => {
     }
 
 }, [calculateReport]);
-   
+useEffect(() => {
+    loadData();
+}, [loadData]);
         const downloadPDF = () => {
 
         const doc = new jsPDF();
