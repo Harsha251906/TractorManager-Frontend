@@ -33,8 +33,10 @@
     border-radius:10px;
     background:#16a34a;
     color:#fff;
-    font-size:18px;
     cursor:pointer;
+    font-size:20px;
+    align-items:center;
+    justify-content:center;
 }
 
 .topbar-title{
@@ -91,7 +93,7 @@
     }
 
     .menu-btn{
-        display:flex;
+        display:flex !important;
         align-items:center;
         justify-content:center;
     }

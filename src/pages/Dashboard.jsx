@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 
 import OwnerLayout from "../layouts/OwnerLayout";
-import OwnerTopBar from "../components/OwnerTopBar";
+
 import OwnerCharts from "../components/OwnerCharts";
 import EarningsAnalytics from "../components/EarningsAnalytics";
 import LiveActivity from "../components/LiveActivity";
@@ -111,9 +111,9 @@ function Dashboard() {
 
         <OwnerLayout>
 
-            <div className="owner-dashboard">
+    <div className="owner-dashboard">
 
-                <OwnerTopBar />
+        {/* HERO */}
 
                 {/* HERO */}
 
