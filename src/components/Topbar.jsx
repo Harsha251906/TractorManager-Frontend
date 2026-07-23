@@ -1,19 +1,20 @@
+import { FaBars } from "react-icons/fa";
+
 import "../styles/Topbar.css";
 
 function Topbar({
 
     title,
 
-    user
+    user,
+
+    toggleSidebar
 
 }) {
 
     const firstLetter =
-
         user?.name
-
             ? user.name.charAt(0).toUpperCase()
-
             : "U";
 
     return (
@@ -21,6 +22,13 @@ function Topbar({
         <header className="topbar">
 
             <div className="topbar-left">
+
+                <button
+                    className="menu-btn"
+                    onClick={toggleSidebar}
+                >
+                    <FaBars />
+                </button>
 
                 <h2 className="topbar-title">
 
@@ -42,22 +50,16 @@ function Topbar({
 
                     <div>
 
-                        <div
-                            style={{
-                                fontWeight: "700",
-                                color: "#111827"
-                            }}
-                        >
+                        <div className="profile-name">
+
                             {user?.name || "User"}
+
                         </div>
 
-                        <div
-                            style={{
-                                fontSize: "13px",
-                                color: "#6b7280"
-                            }}
-                        >
+                        <div className="profile-role">
+
                             {user?.role || "Member"}
+
                         </div>
 
                     </div>

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 
@@ -5,55 +7,54 @@ import "../styles/Layout.css";
 
 function OwnerLayout({ children }) {
 
-    const user = JSON.parse(
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
-        localStorage.getItem("user")
-
-    ) || {};
+    const user =
+        JSON.parse(localStorage.getItem("user")) || {};
 
     const menu = [
 
         {
-    name: "Dashboard",
-    icon: "🏠",
-    path: "/owner"
+            name: "Dashboard",
+            icon: "🏠",
+            path: "/owner",
         },
 
         {
             name: "Add Work",
             icon: "➕",
-            path: "/work"
+            path: "/work",
         },
 
         {
             name: "Booking Requests",
             icon: "📅",
-            path: "/owner-bookings"
+            path: "/owner-bookings",
         },
 
         {
             name: "Live Tracking",
             icon: "📍",
-            path: "/owner-live-tracking"
+            path: "/owner-live-tracking",
         },
 
         {
             name: "Analytics",
             icon: "📊",
-            path: "/analytics"
+            path: "/analytics",
         },
 
         {
             name: "Reports",
             icon: "📄",
-            path: "/reports"
+            path: "/reports",
         },
 
         {
             name: "Notifications",
             icon: "🔔",
-            path: "/notifications"
-        }
+            path: "/notifications",
+        },
 
     ];
 
@@ -69,6 +70,10 @@ function OwnerLayout({ children }) {
 
                 user={user}
 
+                sidebarOpen={sidebarOpen}
+
+                setSidebarOpen={setSidebarOpen}
+
             />
 
             <div className="main-content">
@@ -79,8 +84,13 @@ function OwnerLayout({ children }) {
 
                     user={user}
 
+                    toggleSidebar={() =>
+                        setSidebarOpen(!sidebarOpen)
+                    }
+
                 />
-                                <div className="page-content">
+
+                <div className="page-content">
 
                     {children}
 

@@ -344,3 +344,16 @@ form h2{
 }
 
 }
+.work-page{
+    padding:40px;
+    background:#f4f8f5;
+    min-height:100vh;
+}
+
+@media(max-width:768px){
+
+.work-page{
+    padding:15px;
+}
+
+}
